@@ -2,15 +2,15 @@ The first principle of Redux is whether your app is a really simple one like thi
 
 All mutations, and changes the state in Redux are explicit. It is possible to keep track of all of them. In this case, I am logging every state change in the application in the console. You can see that, in the counter example, there isn't really much state to keep track of so it can be represented by a JavaScript number.
 
-Numbers Showing State
+![Numbers Showing State](https://github.com/indefinitelee/Learning/blob/master/redux/Images/NumbersShowingState.png)
 
 Here is a different example, a list of independent counters that I can add and remove. In this case, a single number is not enough to represent the state of the application, so we use an array of JavaScript numbers. In a more complex application, there is more state to keep track of.
 
-Multiple Counter State
+![Multiple Counter State](https://github.com/indefinitelee/Learning/blob/master/redux/Images/MultipleCounterState.png)
 
 This is a typical todo app, where I can add todos, I can cross them as completed ones, and I can change their current filter. Looking back at the history of the state changes, we can see that the initial state of the app was a JavaScript object, containing an array under the todo string, and a string seen show all, under visible filter.
 
-ToDo App State
+![ToDo App State](https://github.com/indefinitelee/Learning/blob/master/redux/Images/ToDoAppState.png)
 
 When I added the first todo, it was added to the todos array, inside our state object. The todo itself, is described by a plain child script object, saying it was not completed, and the text was saved. Every further change that the app, whether when I was crossing out the todos, or when I changed the visibility filter, resulted in this change to this state object, described in our whole application.
 
