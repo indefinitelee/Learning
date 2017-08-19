@@ -1,5 +1,5 @@
 var assert = require("chai").assert;
-var myNewApi = require("../lib/myNewApi", function() {
+var myNewApi = require("../lib/my_new_api", function() {
   it("exports handleRequest", function() {
     assert.typeOf(myNewApi.handleRequest, "function");
   });
