@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <style>
+    .a {
+    font-size: 2em;
+    }
+  </style>
+
+  <link rel="stylesheet" href="">
+</head>
+
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<body>
+  <svg width="1300" height="1300">
+<!-- need to set height and width of SVG itself -->
+    <rect width="250" height="250"></rect>
+    <rect x="0" y="0" width="100" height="100" fill="red"></rect>
+  <!-- increasing Y values go down the page. 0,0 is at top left of svg area -->
+    <rect x="50" y="50" width="100" height="100" fill="blue"></rect>
+    <rect x="90" y="90" width="100" height="100" fill="rgba(9, 222, 15, 0.5)"></rect>
+    <rect x="110" y="110" width="100" height="100" fill="#78F1A3"></rect>
+  <!-- various ways to fill color -->
+    <rect x="180" y="140" width="100" height="100" fill="none" stroke="blue" stroke-width="5"></rect>
+    <circle r="50" cx="100" cy="100"></circle>
+  <!-- use cx and cy instead of xy to set center of circle -->
+  <!-- line takes start and end coords and draws between them-->
+    <line x1="200" y1="200" x2="400" y2="350"
+      stroke="blue" stroke-width="15"> </line>
+      <path d="M50 50 L100 150 L150 100 L200 150"
+            fill="none" stroke="yellow" stroke-width="10"></path>
+      <!-- path is weird d attribute gets a string that M is moveto command, gets X and y
+      delimited by space L is line-to command which makes a line between M coords and L coords.
+      z closes the path -->
+      <g transform="translate(50, 0)">
+    <!-- moves everything 50 pixels -->
+        <circle cx="90"   cy="90"   r="10"/>
+        <circle cx="190" cy="190" r="10"/>
+        <circle cx="430" cy="420" r="10"/>
+        <circle cx="380"  cy="180" r="10"/>
+        <circle cx="280" cy="580"  r="10"/>
+        <circle cx="680" cy="240"  r="10"/>
+      </g>
+      <!-- g groups several svgs -->
+
+      <text class="a" x="300" y="200"> Hello SVG TExt </text>
+      <!-- need to use css to modify text -->
+
+      <!-- just paste in a link to a google font -->
+
+
+
+
+
+  </svg>
+</body>
+</html></html>
