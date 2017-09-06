@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Learning D3.js</title>
+
+<!-- from https://github.com/OneCent01/D3-Gentle-Intro -->
+
+    <style href="styles.css"></style>
+  </head>
+  <body>
+<!-- load the d3.js library -->
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+  //if there are no elements in a selected section,
+  //what do you expect a selectAll on it to return?
+  //^^answer:
+  //uncomment the line below to see this in action and check answer
+ console.log('should be empty: ', d3.select("body").selectAll("p"));
+
+  //array representing points of data:
+  var theData = [ 1, 2, 3]
+  //indeterminate input size? No problem! data sets of variable size may
+  //be passed into a chain of methods generating visuals on the data attribute
+
+  // representing the datum as "hello"s:
+  var p = d3.select("body").selectAll("p")
+    .data(theData)
+    .enter()
+    .append("p")
+    .text("Welcome to D3!");
+
+
+  //now that the elements are added, what should the array loook like?
+  //^^answer:
+ console.log(`should have ${theData.length} elements: `, d3.select("body").selectAll("p"));
+
+  //next, we can obtain meta data about a given interactive element on the page
+  //What are your intuitions about what the following will return?
+  console.log('should have 3 categories: ', d3.select("body").selectAll("p").data());
+  //
+</script>
+
+<!-- there are several pre-loaded shapes in D3, some of which are illustrated below: -->
+
+  <svg width="200" height="200">
+    <circle cx="25" cy="100" r="25" fill="purple" />
+    <rect x="100" y="100" width="50" height="50" fill="green" />
+    <ellipse cx="100" cy="100" rx="15" ry="10" fill="red" />
+    <line x1="55" y1="5" x2="90" y2="40" stroke="gray" stroke-width="5"  />
+    <polyline fill="none" stroke="blue" stroke-width="2"
+              points="05,30
+                      15,30
+                      15,20
+                      25,20
+                      25,10
+                      35,10" />
+  </svg>
+</body>
+<script src="app.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
