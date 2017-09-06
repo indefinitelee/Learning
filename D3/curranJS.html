@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+
+<body>
+
+
+<!--   // d3.csv("data.csv", function(myArrayofObjects) {
+  //   myArrayofObjects.forEach(function(d) {
+  //     console.log(d.x + ", " + d.y);
+  //   });
+  // });
+  // wtf is my array?
+
+  //d3 provides scales, that transform numbers from data-space to pixel space -->
+<!-- <script>
+//   var scale = d3.scale.linear(); // creates a new instance of the scale
+//     scale.domain([0,1]) // setter function data space, min and max of data range
+//     scale.range([0,100]) //pixel space - over how many pixelsdo you want that data spread?
+// // or
+//   var scale = d3.scale.linear() // NO SEMICOLON
+//     // allows method chaning
+//     .domain([0,1]) // if called without arguments it gets the domain
+//     .range([0,100])
+
+// // ordinal scales - data with discrete values
+// var scale = d3.scale.ordinal()
+//   .domain(["A", "B", "C"])
+//   .range(["Apple", "Banana", "Cookie"])
+// or .rangePoints([0,100]) will divide ABC into that range
+// .rangeRoundPoints will round decimals and give crisper lines
+</script> -->
+
+  <script>
+
+      var data = [1, 2, 3, 4, 5];
+
+      var scale = d3.scale.linear()
+        .domain([1, 5])   // Data space
+        .range([0, 200]); // Pixel space
+
+      var svg = d3.select("body").append("svg")
+        .attr("width",  250)
+        .attr("height", 250);
+
+      svg.selectAll("rect") // contains all existing rects elements - there are none right now
+          .data(data) // data binding
+        .enter().append("rect") // .enter gives a 'virtual selection' data elements are entering into the picture
+          .attr("x", function (d){ return scale(d); }) // x value is return of this data element calls scale of 1, scale of 2, etc.
+          .attr("y", 50)
+          .attr("width",  20)
+          .attr("height", 20);
+
+    </script>
+
