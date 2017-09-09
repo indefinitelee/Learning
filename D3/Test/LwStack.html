@@ -12,7 +12,6 @@
 }
 
 
-
 .bar:hover {
   fill: brown;
 }
@@ -20,9 +19,8 @@
 .axis path {
   display: none;
 }
-
 </style>
-<svg width="960" height="500"></svg>
+<svg width="960" height="600"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
 <script>
@@ -71,8 +69,13 @@ var svg = d3.select("svg"),
 
     g.append("g")
         .attr("class", "axis axis--x")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+        .attr("transform", "translate(10," + height + ")")
+        .call(d3.axisBottom(x))
+      .selectAll("text")
+        .attr("transform", "rotate(90)")
+        .style("font-size", "12px")
+        .attr("dy", ".95em");
+
 
     g.append("g")
         .attr("class", "axis axis--y")
