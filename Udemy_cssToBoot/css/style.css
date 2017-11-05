@@ -1,0 +1,230 @@
+/*NAVBAR*/
+p, h1 {
+  font-family: 'Signika Negative', sans-serif;
+}
+.navbar-default {
+  background: rgba(0,0,0, 0.2);
+  border-color: transparent;
+}
+
+.navbar-nav {
+  font-family: 'Signika Negative', sans-serif;
+  margin: 35px 100px 10px;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: #16a085;
+}
+
+.logo img {
+  margin: 15px 0 0 100px;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media(max-width: 768px) {
+  .logo img {
+    margin: 10px 0 0 15px;
+  }
+
+  .navbar-nav {
+    margin: 0;
+    background: rgba(0,0,0, 0.7);
+
+  }
+
+  .navbar-toggle {
+    margin-top: 45px;
+  }
+
+  #community .image {
+    padding-bottom: 15px;
+  }
+
+  #design {
+    text-align: center;
+  }
+
+  #footer {
+    text-align: center;
+  }
+
+  #footer img {
+    margin: 0 auto;
+  }
+
+}
+
+/*SLIDER*/
+
+#slider {
+ background:url('../img/bg.jpg');
+ width:100%;
+ background-size:cover;
+}
+
+.item {
+ color:#fff;
+ padding:200px 0;
+}
+
+.item h1 {
+ font-size:2.8em;
+}
+
+.carousel-indicators li {
+ background-color:#fff;
+ margin:5px;
+}
+
+.carousel-indicators .active {
+ background-color:#16a085;
+ border:1px solid #16a085;
+ margin:5px;
+}
+
+.btn-success {
+ background-color:#16a085;
+ border:1px solid #16a085;
+ font-size:0.8em;
+ padding:10px 20px 10px 20px;
+ margin:15px 0;
+}
+
+.btn-success:hover {
+ background-color:#000;
+}
+
+.btn-success:focus {
+ background-color:#16a085;
+ border:1px solid #16a085;
+}
+
+.btn-success:active:focus  {
+  background-color:#16a085;
+  border:1px solid #16a085;
+}
+
+/* PHOTO */
+
+#photo {
+  background-color: #f5f6f7;
+  padding: 80px 0 80px 0;
+  text-align: center;
+}
+
+#photo h1 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #16a085;
+}
+
+#photo .fa {
+  color: #16a085;
+}
+
+#photo .fa:hover {
+  color: #0e6655;
+}
+
+/*DESIGN*/
+
+#design {
+  padding: 80px 0 80px;
+}
+
+#design h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #16a085;
+  padding-top: 35px;
+}
+
+/*COMMUNITY*/
+
+#community {
+  background-color: #f5f6f7;
+  padding: 80px 0 80px;
+}
+
+#community h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #16a085;
+}
+
+#community .green {
+  padding-top: 30px
+}
+
+/*SIGNUP*/
+
+#signup {
+ background:url('../img/bg-signup.jpg');
+ width:100%;
+ background-size:cover;
+ padding:300px 0 300px;
+}
+
+#signup h1 {
+ font-size:1.5em;
+ font-weight:700;
+ color:#fff;
+ text-align:center;
+}
+
+#signup .btn-default {
+ background-color:#16a085;
+ border-color:#16a085;
+}
+
+#signup .btn-default:hover {
+ background-color:#000;
+ border-color:#000;
+}
+
+#signup .fa {
+ color:#fff;
+}
+
+/*DOWNLOAD*/
+
+#download {
+  background-color: #f5f6f7;
+  padding: 80px 0 80px;
+  text-align: center;
+}
+
+#download h1 {
+  color: #16a085;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+#download img {
+  margin-top: 15px;
+}
+
+/*FOOTER*/
+
+#footer {
+  padding: 50px 0 50px;
+}
+
+#footer p {
+  font-weight: 700;
+}
+
+#footer a {
+  color: #000;
+}
+
+#footer a:hover {
+  color: #16a085;
+  text-decoration: none;
+}
