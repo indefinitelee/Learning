@@ -1,9 +1,11 @@
 var GreeterMessage = React.createClass({
 	render: function () {
+		var name = this.props.name;
+		var pmessage = this.props.pmessage;
 		return (
 			<div>
-				<h1>something h1</h1>
-				<p>ptag</p>
+				<h1>Hello {name} !</h1>
+				<p>{pmessage}</p>
 			</div>)
 	}
 });
@@ -58,7 +60,7 @@ var Greeter = React.createClass({
 		      <h1>Hello {name}</h1>
 		      <p>{message + "!!!!"}</p>
 
-		      <GreeterMessage/>
+		      <GreeterMessage name={name} message={pmessage}/>
 		      <GreeterForm onNewName={this.handleNewName}/>
 			</div>
 		);
