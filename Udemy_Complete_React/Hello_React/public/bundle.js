@@ -63,28 +63,14 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
 /***/ (function(module, exports) {
 
-function greeter () {
-  document.write("from greeter function")
-}
-
-module.exports = greeter;
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var greeter = __webpack_require__(0);
-
-greeter();
-
+throw new Error("Module parse failed: /Users/admin/code/Indefinitelee Git/Learning/Udemy_Complete_React/Hello_React/public/app.jsx Unexpected token (7:3)\nYou may need an appropriate loader to handle this file type.\n| \n| \t\treturn (\n| \t\t\t<div>\n| \t\t\t\t<h1>Hello {name} !</h1>\n| \t\t\t\t<p>{pmessage}</p>");
 
 /***/ })
 /******/ ]);
