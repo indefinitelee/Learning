@@ -2,6 +2,7 @@ var GreeterMessage = React.createClass({
 	render: function () {
 		var name = this.props.name;
 		var pmessage = this.props.pmessage;
+
 		return (
 			<div>
 				<h1>Hello {name} !</h1>
@@ -23,7 +24,7 @@ var GreeterForm = React.createClass({
 	},
 	render: function () {
 		return (
-			<form>
+			<form onSubmit={this.onFormSubmit}>
 		      	<input type="text" ref="name"/>
 		      	<button>Set Name</button>
 		   </form>
