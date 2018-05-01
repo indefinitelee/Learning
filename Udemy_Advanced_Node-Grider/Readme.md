@@ -37,6 +37,9 @@ Two methods which help process more threads and are relevant to NodeJS are:
 
 For example, during I/O activities such as reading a file from a drive, the OS Scheduler can execute an operation on another thread and then return to the I/O process. 
 
-Vid 6
+Vid 6 
+## The Node Event Loop##
 
-s
+each Node program contains a thread which executes commands on the Event Loop
+
+see loop.js
