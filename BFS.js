@@ -1,3 +1,5 @@
+// visit all nodes on a given leven before going down to next level
+// use an array as a quueue push/shift
 class Node {
     constructor(value){
         this.value = value;
@@ -21,19 +23,18 @@ class BST{
             if (current.value === val) {
                 
                 found = true
-            } else {
-                if (val < current.value) {
-                  current = current.left
-                } else if ( val > current.value){
-                    current=current.right
-                }
+            }
+            if (val < current.value) {
+                current = current.left
+            } else if ( val > current.value){
+                current=current.right
             }
         }
             return current ? current : undefined;
         
     }
 
-    add(val){
+    insert(val){
         let nodeToInsert = new Node(val)
 
         if (!this.root) {
@@ -61,52 +62,34 @@ class BST{
         }
         
     }
-      remove(val) {
-     let node = this.find(val);
-
-      if (!node) {
-        return null;
-      }
-      if (val === node.val) {
-        if (!node.left && !node.right) {
-          return null;
+    BFS(){
+        let data = [];
+        let queue =[];
+        let current;
+        queue.push(this.root)
+        while (queue.length) {
+            current = queue.shift()
+            data.push(current.value)
+            if (current.left)  queue.push(current.left)
+            if (current.right) queue.push(current.right)
+            
         }
-        if (!node.left) {
-          return node.right;
-        }
-        if (!node.right) {
-          return node.left;
-        }
-        let temp = node.right
-        node.val = temp;
-        node.right = this.remove(node.right, temp);
-        return node;
-      } else if (val < node.val) {
-        node.left = this.remove(node.left, val);
-        return node;
-      } else {
-        node.right = this.remove(node.right, val);
-        return node;
-      }
-    this.root = this.remove(this.root, val);
-  }
+        return data;
+    }
+    
 }
 
 
 //      10
 //    5      13
 //  2  7    11   16
+var tree = new BST()
+tree.insert(10)
+tree.insert(6)
+tree.insert(15)
+tree.insert(3)
+tree.insert(8)
+tree.insert(20)
 
-try {
-  const bst = new BST(4);
-  bst.add(3);
-  bst.add(5);
-  bst.remove(3);
-  assert.equal(bst.root.right.val, 5);
 
-  console.log(
-    'PASSED: ' + 'const bst = new BST(4);bst.add(3);bst.add(5);bst.remove(3);'
-  );
-} catch (err) {
-  console.log(err);
-}
+
